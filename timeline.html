@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Machine Learning Study Jam</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Ninestars - v4.7.0
+  * Template URL: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <style type="text/css">
+    body {
+        margin-top: 20px;
+    }
+    .timeline_area {
+        position: relative;
+        z-index: 1;
+    }
+    .single-timeline-area {
+        position: relative;
+        z-index: 1;
+        padding-left: 180px;
+    }
+    @media only screen and (max-width: 575px) {
+        .single-timeline-area {
+            padding-left: 100px;
+        }
+    }
+    .single-timeline-area .timeline-date {
+        position: absolute;
+        width: 180px;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -ms-grid-row-align: center;
+        align-items: center;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        padding-right: 60px;
+    }
+    @media only screen and (max-width: 575px) {
+        .single-timeline-area .timeline-date {
+            width: 100px;
+        }
+    }
+    .single-timeline-area .timeline-date::after {
+        position: absolute;
+        width: 3px;
+        height: 100%;
+        content: "";
+        background-color: #ebebeb;
+        top: 0;
+        right: 30px;
+        z-index: 1;
+    }
+    .single-timeline-area .timeline-date::before {
+        position: absolute;
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        background-color: #f1c40f;
+        content: "";
+        top: 50%;
+        right: 26px;
+        z-index: 5;
+        margin-top: -5.5px;
+    }
+    .single-timeline-area .timeline-date p {
+        margin-bottom: 0;
+        color: #020710;
+        font-size: 13px;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+    .single-timeline-area .single-timeline-content {
+        position: relative;
+        z-index: 1;
+        padding: 30px 30px 25px;
+        border-radius: 6px;
+        margin-bottom: 15px;
+        margin-top: 15px;
+        -webkit-box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125);
+        box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125);
+        border: 1px solid #ebebeb;
+    }
+    @media only screen and (max-width: 575px) {
+        .single-timeline-area .single-timeline-content {
+            padding: 20px;
+        }
+    }
+    .single-timeline-area .single-timeline-content .timeline-icon {
+        -webkit-transition-duration: 500ms;
+        transition-duration: 500ms;
+        width: 30px;
+        height: 30px;
+        background-color: #f1c40f;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 30px;
+        flex: 0 0 30px;
+        text-align: center;
+        max-width: 30px;
+        border-radius: 50%;
+        margin-right: 15px;
+    }
+    .single-timeline-area .single-timeline-content .timeline-icon i {
+        color: #ffffff;
+        line-height: 30px;
+    }
+    .single-timeline-area .single-timeline-content .timeline-text h6 {
+        -webkit-transition-duration: 500ms;
+        transition-duration: 500ms;
+    }
+    .single-timeline-area .single-timeline-content .timeline-text p {
+        font-size: 13px;
+        margin-bottom: 0;
+    }
+    .single-timeline-area .single-timeline-content:hover .timeline-icon,
+    .single-timeline-area .single-timeline-content:focus .timeline-icon {
+        background-color: #020710;
+    }
+    .single-timeline-area .single-timeline-content:hover .timeline-text h6,
+    .single-timeline-area .single-timeline-content:focus .timeline-text h6 {
+        color: #3f43fd;
+    }
+    
+    </style>
+</head>
+
+<body>
+
+   <!-- ======= Header ======= -->
+   <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <!--<h1 class="text-light"><a href="index.html"><span>Ninestars</span></a></h1>-->
+        <h1><a href="index.html"><img src="assets/img/logo_backup.png" height="60px"></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="index.html#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="faq.html">FAQ</a></li>
+          <!--<li><a class="nav-link scrollto" href="#sponsorship">Sponsorship</a></li>
+          <li><a class="nav-link scrollto" href="#partnership">Partnership</a></li>-->
+          <li><a class="nav-link scrollto" href="timeline.html">Timeline</a></li>
+          <li><a class="getstarted scrollto" href="our-team.html">Our Team</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Timeline</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Timeline</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs Section -->
+
+    <!-- ======= F.A.Q Section ======= -->
+    <section id="faq">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+        
+          <p>Event Timeline</p>
+        </div>
+
+        <div class="container">
+         
+          <div class="row">
+              <div class="col-lg-2"></div>
+              
+              <div class="col-lg-10">
+                  <!-- Timeline Area-->
+                  <div class="apland-timeline-area">
+                     <!-- Single Timeline Content-->
+                     <div class="single-timeline-area">
+                      <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                          <p>5/6/2022</p>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-4 col-lg-8 col-xs-12">
+                          <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                              <div class="timeline-icon"><i class="fa fa-address-card" aria-hidden="true"></i></div>
+                              <div class="timeline-text">
+                                <h6>End of study jam</h6>
+                                <p></p>
+                              </div>
+                          </div>
+                      </div>
+                          <div class="col-md-4 col-lg-8 col-xs-12">
+                              <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                  <div class="timeline-icon"><i class="fa fa-address-card" aria-hidden="true"></i></div>
+                                  <div class="timeline-text">
+                                      <h6>Machine Learning Study Jam : Advance</h6>
+                                     <p></p>
+                                  </div>
+                              </div>
+                          </div>
+                         
+                          
+                          
+                      </div>
+                  </div>
+                  <!-- Single Timeline Content-->
+                   <!-- Single Timeline Content-->
+                   <div class="single-timeline-area">
+                    <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                        <p>4/6/2022</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-lg-8 col-xs-12">
+                            <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                <div class="timeline-icon"><i class="fa fa-address-card" aria-hidden="true"></i></div>
+                                <div class="timeline-text">
+                                  <h6>Machine Learning Study Jam : Intermediate</h6>
+                                  <p></p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <!-- Single Timeline Content-->
+                      <!-- Single Timeline Content-->
+                      <div class="single-timeline-area">
+                          <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                              <p>3/6/2022</p>
+                          </div>
+                          <div class="row">
+                            
+                              <div class="col-md-4 col-lg-8 col-xs-12">
+                                  <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                      <div class="timeline-icon"><i class="fa fa-address-card" aria-hidden="true"></i></div>
+                                      <div class="timeline-text">
+                                        <h6>Machine Learning Study Jam : Basic</h6>
+                                        <p></p>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-md-4 col-lg-8 col-xs-12">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-icon"><i class="fa fa-address-card" aria-hidden="true"></i></div>
+                                    <div class="timeline-text">
+                                      <h6>Study Jam Start</h6>
+                                      <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                              
+                          </div>
+                      </div>
+                      <!-- Single Timeline Content-->
+                      <div class="single-timeline-area">
+                          <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                              <p>28/5/2022</p>
+                          </div>
+                          <div class="row">
+                              <div class="col-md-4 col-lg-8 col-xs-12">
+                                  <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                      <div class="timeline-icon"><i class="fa fa-briefcase" aria-hidden="true"></i></div>
+                                      <div class="timeline-text">
+                                          <h6>Registration Close</h6>
+                                         
+                                      </div>
+                                  </div>
+                              </div>
+                              
+                          </div>
+                      </div>
+                      <!-- Single Timeline Content-->
+                      <div class="single-timeline-area">
+                          <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                              <p>15/5/2022</p>
+                          </div>
+                          <div class="row">
+                              <div class="col-md-4 col-lg-8 col-xs-12">
+                                  <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                      <div class="timeline-icon"><i class="fa fa-id-card" aria-hidden="true"></i></div>
+                                      <div class="timeline-text">
+                                          <h6>Open Registration</h6>
+                                          <p></p>
+                                      </div>
+                                  </div>
+                              </div>
+                             
+                              
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      </div>
+    </section><!-- End F.A.Q Section -->
+
+  </main><!-- End #main -->
+
+  <footer id="footer">
+
+   
+    <div class="footer-top">
+    </div>
+
+    <div class="container py-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Machine Learning Study Jam</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/ -->
+        Designed by <a href="#">GDSCMY</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
