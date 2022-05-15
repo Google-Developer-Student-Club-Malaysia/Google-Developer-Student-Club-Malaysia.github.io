@@ -100,7 +100,7 @@
 
               </div>
               <div class="col-lg-4">
-                  <button type="button" class="btn_advance form-control bg-primary text-white bg-danger">Expert</button>
+                  <button type="button" class="btn_advance form-control bg-primary text-white bg-danger">advanced</button>
               </div>
                                         
           </div>
@@ -385,7 +385,7 @@
                                  </div>
                  </div>
                  <div class="ml_advance" hidden>
-                    <h3>ML Level : Expert</h3> 
+                    <h3>ML Level : advanced</h3> 
                     <div class="form-group colg-lg-6">
                     <h5>Question 1</h5>
                        <p>What does hyperparameter tuning do?
@@ -536,6 +536,7 @@
                 </div>
                 <div class="result_section col-lg-6" hidden>
                     <h2>Your marks : <b><p class="yourmarks">0/0</b></h2>
+                    <p class="lvlcaption"></p>
                     <div class="col-lg-3">
                         <button type="button" class="form-control col-lg-12 bg-secondary text-white btn_testagain"  >Test Again</button>
                        </div>
@@ -585,7 +586,7 @@
         var overTotal = 0;
         var marks = 0;
         var lvl = "n/a";
-
+        var lvlcaption = "n/a"
         $('.btn_testagain').click(function(){
             location.reload(); 
         });
@@ -632,16 +633,26 @@
         });
 
         $('.btn_checkresult').click(function(){
+
             $('.yourmarks').html(marks+"/"+overTotal);
             $('.question_section').hide();
             $('.result_section').attr('hidden',false);
 
+            if((lvl == "b" || lvl == "i") && marks >=4)
+            {
+                $('.lvlcaption').html("Congratulations! you are qualified for <b>"+lvlcaption+"</b> level. please register yourself as <b>"+lvlcaption+"</b> level at registration form <a href='https://forms.gle/Mbw3qLLZFXw7otU46'>here</a>.");
+            } else if(lvl == "a" && marks >=5)
+            {
+                $('.lvlcaption').html("Congratulations! you are qualified for <b>"+lvlcaption+"</b> level. please register yourself as <b>"+lvlcaption+"</b> level at registration form <a href='https://forms.gle/Mbw3qLLZFXw7otU46'>here</a>.");
+
+            }
 
         });
 
 
        $('.btn_beginner').click(function(){
         lvl = "b";
+        lvlcaption = "beginner";
         overTotal =6;
         $('.start_section').hide();
         $('.question_section').attr('hidden',false);
@@ -652,6 +663,7 @@
        $('.btn_intermediate').click(function(){
         
         lvl = "i";
+        lvlcaption = "intermediate";
         overTotal =6;
         
         $('.start_section').hide();
@@ -664,6 +676,7 @@
         $('.btn_advance').click(function(){
            
         lvl = "a"; 
+        lvlcaption = "advanced";
         overTotal =7;
         $('.start_section').hide();
    
