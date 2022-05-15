@@ -639,14 +639,20 @@
             $('.question_section').hide();
             $('.result_section').attr('hidden',false);
 
-            if((lvl == "b" || lvl == "i") && marks >=4)
-            {
-                $('.lvlcaption').html("Congratulations! you are qualified for <b>"+lvlcaption+"</b> level. please register yourself as <b>"+lvlcaption+"</b> level at registration form <a href='https://forms.gle/Mbw3qLLZFXw7otU46'>here</a>.");
-            } else if(lvl == "a" && marks >=5)
-            {
-                $('.lvlcaption').html("Congratulations! you are qualified for <b>"+lvlcaption+"</b> level. please register yourself as <b>"+lvlcaption+"</b> level at registration form <a href='https://forms.gle/Mbw3qLLZFXw7otU46'>here</a>.");
+            var msgcaption = "Congratulations! you are qualified for <b>"+lvlcaption+"</b> level. please register yourself as <b>"+lvlcaption+"</b> level at registration form <a href='https://forms.gle/Mbw3qLLZFXw7otU46'>here</a>.";
+            
 
+            if(lvl == "b" && marks < 4)
+            {
+                msgcaption = "please brush up your ML knowledge by viewing the ML contents prepared by us and retry the test";
             }
+
+            if((lvl == "i"  && marks < 4) || (lvl == "a" && marks < 5))
+            {
+                msgcaption = "it is <b>strongly recommended for you to register the one level below</b> instead of current level. However, if you still keen to join current level,  please make sure you fulfill at least some of the prerequisite that listed for current level. We always welcome those newcomers who are passionate and willing to learn new knowledges to challenges themselves";
+            }
+
+            $('.lvlcaption').html(msgcaption);
 
         });
 
