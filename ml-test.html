@@ -127,7 +127,7 @@
                     <label class="form-check-label" for="exampleRadios1">c)10 20 Halo
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input b_1" type="radio" name="b1" value="0" checked >
+                    <input class="form-check-input b_1" type="radio" name="b1" value="0" checked>
                     <label class="form-check-label" for="exampleRadios1">d)Syntax Error
                 </div>
             </div>
@@ -591,15 +591,22 @@
 
  <script>
      $(document).ready(function(){
+        var b1=0,b2=0,b3=0,b4=0,b5=0,b6=0,i1=0,i2=0,i3=0,i4=0,i5=0,i6=0,a1=0,a2=0,a3=0,a4=0,a5=0,a6=0,a7=0;
+
         var overTotal = 0;
         var marks = 0;
         var lvl = "n/a";
         var lvlcaption = "n/a"
         $('.btn_testagain').click(function(){
-            location.reload(); 
+            location.reload(true); 
         });
 
        $('input[type="radio"]').click(function(){
+       
+        });
+
+        $('.btn_checkresult').click(function(){
+
         //beginner
         if(lvl == "b")
         {
@@ -638,9 +645,7 @@
        
         }
 
-        });
 
-        $('.btn_checkresult').click(function(){
 
             $('.yourmarks').html(marks+"/"+overTotal);
             $('.question_section').hide();
