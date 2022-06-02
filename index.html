@@ -60,6 +60,7 @@
         <li><a class="nav-link scrollto" href="timeline.html">Timeline</a></li>
         <li><a class="nav-link scrollto" href="ml-test.html">ML Test</a></li>
         <li><a class="nav-link scrollto" href="prerequisite.html">Prerequisite</a></li>
+        <li><a class="nav-link scrollto" href="about_us.html">About Us</a></li>
         <li><a class="getstarted scrollto" href="our-team.html">Our Team</a></li>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
@@ -220,16 +221,54 @@
            </div>
          -->
         <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-          <div class="portfolio-wrap" id="sponsorship-card">
-            <img src="assets/img/sponsorship/diamond/aemulus.png" class="img-fluid" alt="">
+          <div class="portfolio-wrap sponsorship-card text-center" orgname="Aemulus Holding Berhad" orgid="aemulus">
+            <img class="text-center" src="assets/img/sponsorship/diamond/aemulusnobg2.png" style="max-height: 145px;" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4 id="sponserTitle1">Aemulus Holding Berhad</h4>
+              <h4 id="sponserTitle1 text-center">Aemulus Holding Berhad</h4>
               <p>&nbsp;</p>
             </div>
           </div>
         </div>
 
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="portfolio-wrap sponsorship-card text-center" orgname="Arkmind Sdn Bhd" orgid="arkmind">
+            <img src="assets/img/sponsorship/diamond/arkmindnobg.png" style="max-height: 145px;" class="img-fluid" alt="">
+            <div class="portfolio-info ">
+              <h4 id="sponserTitle1 text-center">Arkmind Sdn Bhd</h4>
+              <p>&nbsp;</p>
+            </div>
+          </div>
+        </div>
 
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="portfolio-wrap sponsorship-card text-center" orgname="Pantas AI" orgid="pantas">
+            <img src="assets/img/sponsorship/diamond/pantasai.jpg" style="max-width:416px;  max-height: 145px;" class="img-fluid" alt="">
+            <div class="portfolio-info ">
+              <h4 id="sponserTitle1 text-center">Pantas AI Sdn Bhd</h4>
+              <p>&nbsp;</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 portfolio-item filter-card"></div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="portfolio-wrap sponsorship-card text-center" orgname="InnoQB" orgid="inno">
+            <img src="assets/img/sponsorship/diamond/innoqb.jpg" style="max-height: 145px;" class="img-fluid" alt="">
+            <div class="portfolio-info ">
+              <h4 id="sponserTitle1 text-center">InnoQB Sdn Bhd</h4>
+              <p>&nbsp;</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="portfolio-wrap sponsorship-card text-center" orgname="Digital Penang" orgid="digital">
+            <img src="assets/img/sponsorship/diamond/digitalpenang.png" style="max-height: 145px;" class="img-fluid" alt="">
+            <div class="portfolio-info ">
+              <h4 id="sponserTitle1 text-center">Digital Penang Sdn Bhd</h4>
+              <p>&nbsp;</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 portfolio-item filter-card"></div>
       </div>
 
     </div>
@@ -302,9 +341,8 @@
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
       </div>
-      <div class="modal-body">
-        ...
-      </div>
+      <div class="modal-body orgdetail">
+            </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" id="btnCloseModal">Close</button>
       </div>
@@ -316,8 +354,30 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
-	  $('#sponsorship-card').click(function(){
+	  $('.sponsorship-card').click(function(){
+      var title = $(this).attr('orgname');
+      var orgid = $(this).attr('orgid');
+
 	    $('#sponsershipModal').modal('show')
+
+      if(orgid == "aemulus")
+      {
+        $('.orgdetail').html("  Aemulus was founded in 2004 by a group of engineers who knew the secret ingredients to creating lifelong success, which are passion and dreams.<br/><br/> They are passionate about technological advancements and keen in running a business."+
+        "In pursuit of their dreams, they were challenged, undermined and even rejected by over and over again. However, their passion ran deep and their determination brought them to a window of opportunity. <br/><br/>"+
+"Henceforth, Aemulus has been designing and developing automated test equipment (ATE) and test and measuring instruments (TMI) for the semiconductor industry since 2005.");
+      }else if(orgid == "arkmind"){
+        $('.orgdetail').html("ArkMind is a customise enterprise solution focusing in Financial Technology (FinTec) & AIoT that servers credit companies with our loan origination solution and also empower our clients to make better decisions with our AI Powered integrated solutions.");
+      }else if(orgid == "pantas"){
+        $('.orgdetail').html("Pantas AI is a group of professional and talented tech-savvies who are passionate and ready to challenge all sorts of difficulties. They started off primarily to help the clients build their next end-to-end computer vision projects. Since then, Pantas AI expanded their business to web development, mobile app development & business solutions.");
+      }else if(orgid == "inno")
+      {
+        $('.orgdetail').html("InnoQB is a company that specialize in digital transformation, helping enterprises in planning, implementation and capitalization of the transformation");
+      }else if(orgid == "digital")
+      {
+        $('.orgdetail').html("Digital Penang is a government-linked company owned by the State of Penang, which began operations in April 2020 to accelerate efforts to capture opportunities in the digital economy and promote a digitally engaged society.");
+      }
+
+      $('.modal-title').text(title);
 		});
 	  $('#btnCloseModal').click(function(){
 		  $('#sponsershipModal').modal('hide')
